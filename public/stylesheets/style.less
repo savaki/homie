@@ -11,9 +11,17 @@ a {
 
 }
 
+.launcher li {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
 .launcher a {
-  width: 80px;
-  height: 80px;
+  padding-top: 5px;
+  width: 100px;
+  height: 100px;
   display: block;
   text-align: center;
   border: 1px solid #ffffff;
@@ -21,12 +29,16 @@ a {
   cursor: pointer;
 }
 
+.launcher a.active {
+  box-shadow: 0px 0px 6px #0088cc;
+}
+
 .launcher a:hover {
   text-decoration: none;
 }
 
 .launcher p {
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .launcher li {

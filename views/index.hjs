@@ -17,20 +17,25 @@
 
   <script type="text/javascript" language="JavaScript" src="/javascripts/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" language="JavaScript">
-    function click(href) {
+    function launch(element, href) {
+      element.addClass("active");
       $.ajax(href);
+      setTimeout(function () {
+        element.removeClass("active");
+      }, 250);
+      return false;
     }
 
     $(document).ready(function () {
       $('.launcher a').each(function () {
-        var a = $(this);
-        var href = a.attr('href');
-        a.click(function () {
-          click(href);
+        var element = $(this);
+        var href = element.attr('href');
+        element.click(function () {
+          launch(element, href);
           return false;
         });
-        a.bind('touchstart', function () {
-          click(href);
+        element.bind('touchstart', function () {
+          launch(element, href);
           return false;
         });
       });
@@ -66,7 +71,14 @@
   <ul class="launcher">
     <li>
       <a href="/api/ir/projector/power">
-        <img src="images/icons/projector.jpg"/>
+        <img src="/images/icons/projector.jpg"/>
+
+        <p>Projector</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/ir/projector/">
+        <img src="/images/icons/bulb.png"/>
 
         <p>Projector</p>
       </a>
