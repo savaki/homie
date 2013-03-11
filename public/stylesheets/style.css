@@ -15,7 +15,6 @@ a {
   cursor: pointer;
 }
 .launcher a:hover {
-  border: 1px solid #00B7FF;
   text-decoration: none;
 }
 .launcher p {
