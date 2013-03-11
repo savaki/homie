@@ -4,9 +4,9 @@
  */
 
 var net      = require('net')
-var ir_host  = '127.0.0.1';  // ip address of the iTach
-var ir_port  = 3000;         // what port does the iTach run on?
-var ir_debug = false;         // show debug messages
+var ir_host  = '10.0.1.15';  // ip address of the iTach
+var ir_port  = 4998;         // what port does the iTach run on?
+var ir_debug = true;         // show debug messages
 
 var IR = {
 	/**
@@ -20,7 +20,7 @@ var IR = {
 				console.log('connected to ir_host');
 				console.log('send message to => ' + msg1);
 			}
-			client.write('GET / HTTP/1.0\r\n\r\n');
+			client.write(msg1 + '\r\n');
 		});
 
 		// once we receive data, request that the connection be closed
@@ -63,6 +63,7 @@ var IR = {
 // below here you'll find the API calls supported by homie
 
 exports.index = function(req, res) {
-	IR.ajaxSend(res, 'hello world', 'argle')
+	var power = 'sendir,1:1,5,37993,1,1,340,169,22,63,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,63,22,20,22,63,22,20,22,63,22,20,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,20,22,20,22,63,22,63,22,63,22,63,22,63,22,20,22,63,22,63,22,20,22,4863';
+	IR.ajaxSend(res, power, power);
 };
 
