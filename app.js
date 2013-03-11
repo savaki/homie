@@ -32,9 +32,8 @@ app.configure('development', function(){
 });
 
 app.get('/',        routes.index);
-app.get('/sample',  routes.sample);
 app.get('/users',   user.list);
-app.get('/api/ir/', ir.index);
+app.get('/api/ir/projector/power', ir.projector_power);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

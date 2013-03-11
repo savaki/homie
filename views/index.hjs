@@ -1,57 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="user-scalable=0, initial-scale=1.0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" /> 
-    <title>Homie</title>
+<head>
+  <meta name="viewport" content="user-scalable=0, initial-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <title>Homie</title>
 
-    <!-- specify the home screen icons -->
-    <link rel="apple-touch-icon" href="/images/mcp-icon.png" /> 
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/mcp-icon-ipad.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/mcp-icon-iphone-retina.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/mcp-icon-ipad-retina.png" />
+  <!-- specify the home screen icons -->
+  <link rel="apple-touch-icon" href="/images/mcp-icon.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/mcp-icon-ipad.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/mcp-icon-iphone-retina.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/mcp-icon-ipad-retina.png"/>
 
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css" />
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">MCP</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"/>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css"/>
 
+  <script type="text/javascript" language="JavaScript" src="/javascripts/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" language="JavaScript">
+    function click(href) {
+      $.ajax(href);
+    }
+
+    $(document).ready(function () {
+      var iOS = (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1);
+
+      if (iOS) {
+      } else {
+        $('.launcher a').each(function () {
+          var a = $(this);
+          var href = a.attr('href');
+          a.click(function () {
+            click(href);
+            return false;
+          });
+          a.bind('touchstart', function () {
+            click(href);
+            return false;
+          });
+        });
+      }
+    });
+    ;
+    ;
+  </script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
     <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">MCP</a>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
-
-<table class="table">
-<tr>
-<td>name</td>
-<td>email</td>
-</tr>
-<tr>
-<td>Matt Ho</td>
-<td>matt.ho@gmail.com</td>
-</tr>
-</table>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
     </div>
-    <script language="Javascript" type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-  </body>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="launcher">
+    <li>
+      <a href="/api/ir/projector/power">
+        <img src="images/icons/projector.jpg"/>
+
+        <p>Projector</p>
+      </a>
+    </li>
+  </ul>
+</div>
+<script language="Javascript" type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>

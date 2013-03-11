@@ -62,7 +62,7 @@ var IR = {
 
 // below here you'll find the API calls supported by homie
 
-exports.index = function(req, res) {
+exports.projector_power = function(req, res) {
 	var power = 'sendir,1:1,5,37993,1,1,340,169,22,63,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,63,22,20,22,63,22,20,22,63,22,20,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,20,22,20,22,63,22,63,22,63,22,63,22,63,22,20,22,63,22,63,22,20,22,4863';
 	IR.ajaxSend(res, power, power);
 };
