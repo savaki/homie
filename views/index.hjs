@@ -22,23 +22,18 @@
     }
 
     $(document).ready(function () {
-      var iOS = (navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1);
-
-      if (iOS) {
-      } else {
-        $('.launcher a').each(function () {
-          var a = $(this);
-          var href = a.attr('href');
-          a.click(function () {
-            click(href);
-            return false;
-          });
-          a.bind('touchstart', function () {
-            click(href);
-            return false;
-          });
+      $('.launcher a').each(function () {
+        var a = $(this);
+        var href = a.attr('href');
+        a.click(function () {
+          click(href);
+          return false;
         });
-      }
+        a.bind('touchstart', function () {
+          click(href);
+          return false;
+        });
+      });
     });
     ;
     ;
