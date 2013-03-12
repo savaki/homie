@@ -77,7 +77,7 @@
       </a>
     </li>
     <li>
-      <a href="/api/ir/projector/">
+      <a href="/api/ir/itv/play_pause">
         <img src="/images/icons/bulb.png"/>
 
         <p>Projector</p>
