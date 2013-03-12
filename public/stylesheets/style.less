@@ -1,5 +1,10 @@
+/* clear fix */
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix       {display:inline-block;}
+.clearfix       {display:block;}
+
 body {
-  padding: 50px;
+  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,21 +12,24 @@ a {
   color: #00B7FF;
 }
 
-.launcher {
-
+.launcher ul {
+  margin: 0;
+  padding: 0;
 }
 
 .launcher li {
   float: left;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 10px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
+.launcher .spacer,
 .launcher a {
   padding-top: 5px;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   display: block;
   text-align: center;
   border: 1px solid #ffffff;
@@ -38,7 +46,7 @@ a {
 }
 
 .launcher p {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .launcher li {
@@ -51,3 +59,4 @@ a {
   height: 64px;
   width: 64px;
 }
+

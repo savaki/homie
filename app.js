@@ -35,6 +35,12 @@ app.get('/',        routes.index);
 app.get('/users',   user.list);
 app.get('/api/ir/projector/power', ir.projector_power);
 app.get('/api/ir/itv/play_pause', ir.itv_play_pause);
+app.get('/api/ir/itv/menu', ir.itv_menu);
+app.get('/api/ir/itv/up', ir.itv_up);
+app.get('/api/ir/itv/down', ir.itv_down);
+app.get('/api/ir/itv/left', ir.itv_left);
+app.get('/api/ir/itv/right', ir.itv_right);
+app.get('/api/ir/itv/select', ir.itv_select);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
