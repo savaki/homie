@@ -78,9 +78,16 @@
     </li>
     <li>
       <a href="/api/ir/itv/play_pause">
+        <img src="/images/icons/play_pause.png"/>
+
+        <p>Play / Pause</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/ir/itv/play_pause">
         <img src="/images/icons/bulb.png"/>
 
-        <p>Projector</p>
+        <p>Light</p>
       </a>
     </li>
   </ul>
