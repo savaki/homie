@@ -75,7 +75,7 @@
       </a>
     </li>
     <li>
-      <a href="/api/ir/itv/play_pause">
+      <a href="/api/x10/a1">
         <img src="/images/icons/bulb.png"/>
 
         <p>Light</p>

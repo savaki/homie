@@ -7,6 +7,7 @@ var express = require('express')
   , routes  = require('./routes')
   , user    = require('./routes/user')
   , ir      = require('./routes/ir')
+  , x10     = require('./routes/x10')
   , http    = require('http')
   , path    = require('path');
 
@@ -33,6 +34,7 @@ app.configure('development', function(){
 
 app.get('/',        routes.index);
 app.get('/users',   user.list);
+
 app.get('/api/ir/projector/power', ir.projector_power);
 app.get('/api/ir/itv/play_pause', ir.itv_play_pause);
 app.get('/api/ir/itv/menu', ir.itv_menu);
@@ -41,6 +43,8 @@ app.get('/api/ir/itv/down', ir.itv_down);
 app.get('/api/ir/itv/left', ir.itv_left);
 app.get('/api/ir/itv/right', ir.itv_right);
 app.get('/api/ir/itv/select', ir.itv_select);
+
+app.get('/api/x10/a1',  x10.a1);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
