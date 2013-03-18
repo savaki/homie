@@ -8,6 +8,7 @@ var express = require('express')
   , user    = require('./routes/user')
   , ir      = require('./routes/ir')
   , x10     = require('./routes/x10')
+  , hue     = require('./routes/hue')
   , http    = require('http')
   , path    = require('path');
 
@@ -45,6 +46,14 @@ app.get('/api/ir/itv/right', ir.itv_right);
 app.get('/api/ir/itv/select', ir.itv_select);
 
 app.get('/api/x10/a1',  x10.a1);
+
+app.get('/api/hue/discover', hue.discover);
+app.get('/api/hue/register', hue.register);
+app.get('/api/hue/lights', hue.lights);
+app.get('/api/hue/alert', hue.alert);
+app.get('/api/hue/sunrise', hue.sunrise);
+app.get('/api/hue/midnight', hue.midnight);
+app.get('/api/hue/noon', hue.noon);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
