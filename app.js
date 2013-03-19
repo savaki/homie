@@ -46,6 +46,9 @@ app.get('/api/ir/itv/right', ir.itv_right);
 app.get('/api/ir/itv/select', ir.itv_select);
 
 app.get('/api/x10/a1',  x10.a1);
+app.get('/api/x10/b1',  x10.b1);
+app.get('/api/x10/c1',  x10.c1);
+app.get('/api/x10/d1',  x10.d1);
 
 app.get('/api/hue/discover', hue.discover);
 app.get('/api/hue/register', hue.register);
