@@ -10,6 +10,15 @@ var x10_debug = true;         // show debug messages
 var X10 = {
   a1: true,
   b1: true,
+  c1: true,
+  d1: true,
+  e1: true,
+  f1: true,
+  g1: true,
+  h1: true,
+  i1: true,
+  j1: true,
+  k1: true,
 
   /**
    * sends a sequence of ir messages.  msg2 and msg3 are optional.  if more than
@@ -113,4 +122,89 @@ exports.d1 = function (req, res) {
     X10.ajaxSend(res, command);
   }
 };
+
+exports.e1 = function (req, res) {
+  if (X10.e1) {
+    var command = 'rf e1 off';
+    X10.e1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf e1 on';
+    X10.e1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.f1 = function (req, res) {
+  if (X10.f1) {
+    var command = 'rf f1 off';
+    X10.f1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf f1 on';
+    X10.f1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.g1 = function (req, res) {
+  if (X10.g1) {
+    var command = 'rf g1 off';
+    X10.g1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf g1 on';
+    X10.g1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.h1 = function (req, res) {
+  if (X10.h1) {
+    var command = 'rf h1 off';
+    X10.h1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf h1 on';
+    X10.h1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.i1 = function (req, res) {
+  if (X10.i1) {
+    var command = 'rf i1 off';
+    X10.i1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf i1 on';
+    X10.i1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.j1 = function (req, res) {
+  if (X10.j1) {
+    var command = 'rf j1 off';
+    X10.j1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf j1 on';
+    X10.j1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
+exports.k1 = function (req, res) {
+  if (X10.k1) {
+    var command = 'rf k1 off';
+    X10.k1 = false;
+    X10.ajaxSend(res, command);
+  } else {
+    var command = 'rf k1 on';
+    X10.k1 = true;
+    X10.ajaxSend(res, command);
+  }
+};
+
 

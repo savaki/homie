@@ -5,7 +5,6 @@
 
 var express = require('express')
   , routes  = require('./routes')
-  , user    = require('./routes/user')
   , ir      = require('./routes/ir')
   , x10     = require('./routes/x10')
   , hue     = require('./routes/hue')
@@ -34,7 +33,7 @@ app.configure('development', function(){
 });
 
 app.get('/',        routes.index);
-app.get('/users',   user.list);
+app.get('/x-10',    routes.x10);
 
 app.get('/api/ir/projector/power', ir.projector_power);
 app.get('/api/ir/itv/play_pause', ir.itv_play_pause);
@@ -44,11 +43,20 @@ app.get('/api/ir/itv/down', ir.itv_down);
 app.get('/api/ir/itv/left', ir.itv_left);
 app.get('/api/ir/itv/right', ir.itv_right);
 app.get('/api/ir/itv/select', ir.itv_select);
+app.get('/api/ir/yamaha/louder', ir.yamaha_louder);
+app.get('/api/ir/yamaha/softer', ir.yamaha_softer);
 
 app.get('/api/x10/a1',  x10.a1);
 app.get('/api/x10/b1',  x10.b1);
 app.get('/api/x10/c1',  x10.c1);
 app.get('/api/x10/d1',  x10.d1);
+app.get('/api/x10/e1',  x10.d1);
+app.get('/api/x10/f1',  x10.d1);
+app.get('/api/x10/g1',  x10.d1);
+app.get('/api/x10/h1',  x10.d1);
+app.get('/api/x10/i1',  x10.d1);
+app.get('/api/x10/j1',  x10.d1);
+app.get('/api/x10/k1',  x10.d1);
 
 app.get('/api/hue/discover', hue.discover);
 app.get('/api/hue/register', hue.register);

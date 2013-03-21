@@ -67,76 +67,61 @@
 <div class="">
   <ul class="launcher clearfix">
     <li>
-      <a href="/api/ir/projector/power">
-        <img src="/images/icons/projector.jpg"/>
-
-        <p>Projector</p>
+      <a href="/api/x10/a1">
+        <p>A1</p>
       </a>
     </li>
     <li>
-      <a href="/api/x10/a1">
-        <img src="/images/icons/bulb.png"/>
-
-        <p>Light</p>
+      <a href="/api/x10/b1">
+        <p>B1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/c1">
+        <p>C1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/d1">
+        <p>D1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/e1">
+        <p>E1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/f1">
+        <p>F1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/g1">
+        <p>G1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/h1">
+        <p>H1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/i1">
+        <p>I1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/j1">
+        <p>J1</p>
+      </a>
+    </li>
+    <li>
+      <a href="/api/x10/k1">
+        <p>K1</p>
       </a>
     </li>
   </ul>
-  <div>
-    <ul class="launcher clearfix">
-      <li>
-        <a href="/api/ir/yamaha/softer"><img src="/images/icons/softer.png"/></a>
-      </li>
-      <li>
-        <a href="/api/ir/itv/up">
-          <img src="/images/icons/arrow_up.png"/>
-        </a>
-      </li>
-      <li>
-        <a href="/api/ir/yamaha/louder"><img src="/images/icons/louder.png"/></a>
-      </li>
-    </ul>
-    <ul class="launcher clearfix">
-      <li>
-        <a href="/api/ir/itv/left">
-          <img src="/images/icons/arrow_left.png"/>
-        </a>
-      </li>
-      <li>
-        <a href="/api/ir/itv/select">
-          <img src="/images/icons/circle.png"/>
-
-          <p>Play/Pause</p>
-        </a>
-      </li>
-      <li>
-        <a href="/api/ir/itv/right">
-          <img src="/images/icons/arrow_right.png"/>
-        </a>
-      </li>
-    </ul>
-    <ul class="launcher clearfix">
-      <li>
-        <a href="/api/ir/itv/menu">
-          <img src="/images/icons/apple_menu.png"/>
-
-          <p>Menu</p>
-        </a>
-      </li>
-      <li>
-        <a href="/api/ir/itv/down">
-          <img src="/images/icons/arrow_down.png"/>
-        </a>
-      </li>
-      <li>
-        <a href="/api/ir/itv/play_pause">
-          <img src="/images/icons/play_pause.png"/>
-
-          <p>Select</p>
-        </a>
-      </li>
-    </ul>
-    </table>
-  </div>
   <script language="Javascript" type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
