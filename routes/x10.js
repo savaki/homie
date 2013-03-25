@@ -63,10 +63,19 @@ var X10 = {
    * regardless of whether the messages were sent successfully, this return a json
    * message of {'status':'ok'}
    */
-  ajaxSend: function (res, message) {
+  ajaxSend: function (res, message, is_on) {
     this.send(message, message);
 
-    var body = "{'status':'ok'}";
+	var status;
+	if( is_on === undefined ) {
+		status = "unknown";
+	} else if( is_on ) {
+		status = "on";
+	} else {
+		status = "off";
+	}
+
+    var body = "{'result':'ok', 'status':'" + isOn + "'}";
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Content-Length', body.length);
     res.end(body);
@@ -79,11 +88,11 @@ exports.a1 = function (req, res) {
   if (X10.a1) {
     var command = 'rf a1 off';
     X10.a1 = false;
-    X10.ajaxSend(res, command);
+    X10.ajaxSend(res, command, X10.a1);
   } else {
     var command = 'rf a1 on';
     X10.a1 = true;
-    X10.ajaxSend(res, command);
+    X10.ajaxSend(res, command, X10.a1);
   }
 };
 
@@ -199,12 +208,24 @@ exports.k1 = function (req, res) {
   if (X10.k1) {
     var command = 'rf k1 off';
     X10.k1 = false;
-    X10.ajaxSend(res, command);
+    X10.ajaxSend(res, command, X10.k1);
   } else {
     var command = 'rf k1 on';
     X10.k1 = true;
-    X10.ajaxSend(res, command);
+    X10.ajaxSend(res, command, X10.k1);
   }
+};
+
+exports.c1_on = function (req, res) {
+  var command = 'rf c1 on';
+  X10.c1 = true;
+  X10.ajaxSend(res, command, X10.c1);
+};
+
+exports.c1_off = function (req, res) {
+  var command = 'rf c1 off';
+  X10.c1 = false;
+  X10.ajaxSend(res, command, X10.c1);
 };
 
 
