@@ -48,7 +48,11 @@ app.get('/api/ir/yamaha/softer', ir.yamaha_softer);
 
 app.get('/api/x10/a1',  x10.a1);
 app.get('/api/x10/b1',  x10.b1);
+app.get('/api/x10/b1_on',  x10.b1_on);
+app.get('/api/x10/b1_off', x10.b1_off);
 app.get('/api/x10/c1',  x10.c1);
+app.get('/api/x10/c1_on',  x10.c1_on);
+app.get('/api/x10/c1_off', x10.c1_off);
 app.get('/api/x10/d1',  x10.d1);
 app.get('/api/x10/e1',  x10.e1);
 app.get('/api/x10/f1',  x10.f1);

@@ -75,7 +75,7 @@ var X10 = {
 		status = "off";
 	}
 
-    var body = "{'result':'ok', 'status':'" + isOn + "'}";
+    var body = "{'result':'ok', 'status':'" + status + "'}";
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Content-Length', body.length);
     res.end(body);
@@ -216,6 +216,18 @@ exports.k1 = function (req, res) {
   }
 };
 
+exports.b1_on = function (req, res) {
+  var command = 'rf b1 on';
+  X10.b1 = true;
+  X10.ajaxSend(res, command, X10.b1);
+};
+
+exports.b1_off = function (req, res) {
+  var command = 'rf b1 off';
+  X10.b1 = false;
+  X10.ajaxSend(res, command, X10.b1);
+};
+
 exports.c1_on = function (req, res) {
   var command = 'rf c1 on';
   X10.c1 = true;
@@ -227,5 +239,6 @@ exports.c1_off = function (req, res) {
   X10.c1 = false;
   X10.ajaxSend(res, command, X10.c1);
 };
+
 
 
