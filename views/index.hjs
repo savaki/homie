@@ -80,6 +80,13 @@
         <p>Light</p>
       </a>
     </li>
+    <li>
+      <a href="/api/hue/toggle_lights">
+        <img src="/images/icons/bulb.png"/>
+
+        <p>Hue</p>
+      </a>
+    </li>
   </ul>
   <div>
     <ul class="launcher clearfix">

@@ -69,6 +69,9 @@ app.get('/api/hue/alert', hue.alert);
 app.get('/api/hue/sunrise', hue.sunrise);
 app.get('/api/hue/midnight', hue.midnight);
 app.get('/api/hue/noon', hue.noon);
+app.get('/api/hue/toggle_lights', hue.toggle_lights);
+app.get('/api/hue/lights_on', hue.lights_on);
+app.get('/api/hue/lights_off', hue.lights_off);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

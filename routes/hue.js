@@ -19,6 +19,10 @@ var jsonOk = function (res) {
  */
 var dayLights = [1, 3];
 
+var group1 = [4, 5, 6]
+
+var group1On = false
+
 /*
  * GET home page.
  */
@@ -158,5 +162,49 @@ exports.noon = function (req, res) {
 
   jsonOk(res);
 };
+
+exports.lights_on = function (req, res) {
+  console.log("#lights_on");
+  var state = lightState.create().on();
+
+  for (var i = 0; i < group1.length; i++) {
+    api.setLightState(group1[i], state);
+  }
+
+  jsonOk(res);
+};
+
+exports.lights_off = function (req, res) {
+  console.log("#lights_off");
+  var state = lightState.create().off();
+
+  for (var i = 0; i < group1.length; i++) {
+    api.setLightState(group1[i], state);
+  }
+
+  jsonOk(res);
+};
+
+exports.toggle_lights = function (req, res) {
+  console.log("#toggle_lights");
+
+  var state;
+  var state = lightState.create().off();
+  if( group1On ) {
+    group1On = false
+    state = lightState.create().off();
+  } else {
+    group1On = true
+    state = lightState.create().on();
+  } 
+
+  for (var i = 0; i < group1.length; i++) {
+    api.setLightState(group1[i], state);
+  }
+
+  jsonOk(res);
+};
+
+
 
 
