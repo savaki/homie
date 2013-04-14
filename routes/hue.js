@@ -19,7 +19,7 @@ var jsonOk = function (res) {
  */
 var dayLights = [1, 3];
 
-var group1 = [4, 5, 6]
+var group1 = [2, 4, 5, 6, 7, 8]
 
 var group1On = false
 
