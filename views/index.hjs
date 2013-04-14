@@ -40,6 +40,19 @@
         });
       });
     });
+
+    $(document).ready(function () {
+      $('.page').each(function () {
+        var element = $(this);
+        if (element.hasClass('active') == false) {
+          var index = $(this).attr('data-index');
+          element.click(function () {
+            window.mySwipe.slide(index, 300);
+          });
+        }
+      });
+    });
+    ;
   </script>
 </head>
 <body>
@@ -68,6 +81,12 @@
   <div class="swipe-wrap">
     <!-- first page -->
     <div>
+      <div class="pager clearfix">
+        <ul>
+          <li class="page active"></li>
+          <li class="page" data-index="1"></li>
+        </ul>
+      </div>
       <ul class="launcher clearfix">
         <li>
           <a href="/api/ir/projector/power">
@@ -152,6 +171,12 @@
 
     <!-- second page -->
     <div>
+      <div class="pager clearfix">
+        <ul>
+          <li class="page" data-index="0"></li>
+          <li class="page active"></li>
+        </ul>
+      </div>
       <ul class="launcher clearfix">
         <li>
           <a href="/api/hue/sunrise">
