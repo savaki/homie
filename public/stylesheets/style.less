@@ -60,3 +60,52 @@ a {
   width: 64px;
 }
 
+
+.swipe {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  height: 500px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.pager {
+  text-align: center;
+}
+
+.pager ul {
+  display: block;
+  width: 85px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  float: left;
+  border: 1px solid #c0c0c0;
+  cursor: pointer;
+}
+
+.page.active {
+  background-color: #c0c0c0;
+}
+
+
