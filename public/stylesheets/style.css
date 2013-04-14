@@ -59,3 +59,24 @@ a {
   height: 64px;
   width: 64px;
 }
+
+.swipe {
+    height: 500px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap > div {
+    height: 500px;
+    float:left;
+    width:100%;
+    position: relative;
+}
+
